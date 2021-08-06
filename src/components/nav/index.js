@@ -18,7 +18,7 @@ const Nav = () => {
         </Link>
       </li>
       <li>
-        <Link to="/confrat">
+        <Link to="/confraternizacao">
           <div>
             <p>Party</p>
           </div>
