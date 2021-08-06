@@ -1,13 +1,14 @@
 import Card from "../../components/cards";
+import RemoveButton from "../../components/removeButton";
 import { useFormatura } from "../../providers/formatura/inde";
 
 const Formatura = () => {
-  const { formaturaLista } = useFormatura();
+  const { formaturaLista, setFormaturaLista } = useFormatura();
 
   return (
     <div>
-      {formaturaLista.map((item) => (
-        <div key={item.id}>
+      {formaturaLista.map((item, index) => (
+        <div key={index}>
           <Card
             image={item.image_url}
             name={item.name}
@@ -17,7 +18,12 @@ const Formatura = () => {
             unit={item.volume.unit}
           />
           <div>
-            <button>Remove from list</button>
+            <RemoveButton
+              lista={formaturaLista}
+              setLista={setFormaturaLista}
+              product={item}
+              productIndex={index}
+            />
           </div>
         </div>
       ))}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useCasamento } from "../../providers/casamento";
 import { useConfrat } from "../../providers/confraternizacao";
 import { useFormatura } from "../../providers/formatura/inde";
+import { toast } from "react-toastify";
 
 const Products = () => {
   const { productsList } = useProducts();
@@ -17,16 +18,19 @@ const Products = () => {
       case "Wedding":
         setCasamentoLista([...casamentoLista, item]);
         setEvent("");
+        toast.success(`${item.name} added from ${event}`);
         break;
 
       case "Party":
         setConfratLista([...confratLista, item]);
         setEvent("");
+        toast.success(`Produto adicionado à ${event}`);
         break;
 
       case "Graduation":
         setFormaturaLista([...formaturaLista, item]);
         setEvent("");
+        toast.success(`Produto adicionado à ${event}`);
         break;
 
       default:

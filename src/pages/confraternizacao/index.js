@@ -1,13 +1,14 @@
 import Card from "../../components/cards";
+import RemoveButton from "../../components/removeButton";
 import { useConfrat } from "../../providers/confraternizacao";
 
 const Confraternizacao = () => {
-  const { confratLista } = useConfrat();
+  const { confratLista, setConfratLista } = useConfrat();
 
   return (
     <div>
-      {confratLista.map((item) => (
-        <div key={item.id}>
+      {confratLista.map((item, index) => (
+        <div key={index}>
           <Card
             image={item.image_url}
             name={item.name}
@@ -17,7 +18,12 @@ const Confraternizacao = () => {
             unit={item.volume.unit}
           />
           <div>
-            <button>Remove from list</button>
+            <RemoveButton
+              product={item}
+              lista={confratLista}
+              setLista={setConfratLista}
+              productIndex={index}
+            />
           </div>
         </div>
       ))}

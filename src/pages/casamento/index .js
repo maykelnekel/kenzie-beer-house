@@ -1,14 +1,14 @@
 import Card from "../../components/cards";
+import RemoveButton from "../../components/removeButton";
 import { useCasamento } from "../../providers/casamento";
 
 const Casamento = () => {
-  const { casamentoLista } = useCasamento();
-  console.log(casamentoLista);
+  const { casamentoLista, setCasamentoLista } = useCasamento();
 
   return (
     <div>
-      {casamentoLista.map((item) => (
-        <div key={item.id}>
+      {casamentoLista.map((item, index) => (
+        <div key={index}>
           <Card
             image={item.image_url}
             name={item.name}
@@ -18,7 +18,12 @@ const Casamento = () => {
             unit={item.volume.unit}
           />
           <div>
-            <button>Remove from list</button>
+            <RemoveButton
+              product={item}
+              lista={casamentoLista}
+              setLista={setCasamentoLista}
+              productIndex={index}
+            />
           </div>
         </div>
       ))}
