@@ -1,13 +1,37 @@
-import { useProducts } from "../../providers/products/inde";
 import Card from "../../components/cards";
+import { useProducts } from "../../providers/products/inde";
 import { useState } from "react";
+import { useCasamento } from "../../providers/casamento";
+import { useConfrat } from "../../providers/confraternizacao";
+import { useFormatura } from "../../providers/formatura/inde";
+
 const Products = () => {
   const { productsList } = useProducts();
+  const { casamentoLista, setCasamentoLista } = useCasamento();
+  const { confratLista, setConfratLista } = useConfrat();
+  const { formaturaLista, setFormaturaLista } = useFormatura();
   const [event, setEvent] = useState("");
 
-  const handleClick = () => {
-    console.log(event);
-    setEvent("");
+  const handleClick = (item) => {
+    switch (event) {
+      case "Wedding":
+        setCasamentoLista([...casamentoLista, item]);
+        setEvent("");
+        break;
+
+      case "Party":
+        setConfratLista([...confratLista, item]);
+        setEvent("");
+        break;
+
+      case "Graduation":
+        setFormaturaLista([...formaturaLista, item]);
+        setEvent("");
+        break;
+
+      default:
+        break;
+    }
   };
   return (
     <div>
@@ -33,7 +57,7 @@ const Products = () => {
               <option value="Party" />
               <option value="Graduation" />
             </datalist>
-            <button onClick={handleClick}>Add list</button>
+            <button onClick={() => handleClick(item)}>Add list</button>
           </div>
         </div>
       ))}
