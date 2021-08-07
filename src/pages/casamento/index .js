@@ -1,14 +1,16 @@
 import Card from "../../components/cards";
+
 import RemoveButton from "../../components/removeButton";
 import { useCasamento } from "../../providers/casamento";
+import { Container, ContainerButton, ContainerCard } from "./styles";
 
 const Casamento = () => {
   const { casamentoLista, setCasamentoLista } = useCasamento();
 
   return (
-    <div>
+    <Container>
       {casamentoLista.map((item, index) => (
-        <div key={index}>
+        <ContainerCard key={index}>
           <Card
             image={item.image_url}
             name={item.name}
@@ -17,17 +19,17 @@ const Casamento = () => {
             volume={item.volume.value}
             unit={item.volume.unit}
           />
-          <div>
+          <ContainerButton>
             <RemoveButton
               product={item}
               lista={casamentoLista}
               setLista={setCasamentoLista}
               productIndex={index}
             />
-          </div>
-        </div>
+          </ContainerButton>
+        </ContainerCard>
       ))}
-    </div>
+    </Container>
   );
 };
 export default Casamento;

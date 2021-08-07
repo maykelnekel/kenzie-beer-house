@@ -7,6 +7,7 @@ import {
   Description,
   Button,
   IntraContainer,
+  Ul,
 } from "./styles.js";
 import { BiHide, BiShowAlt } from "react-icons/bi";
 import { useState } from "react";
@@ -18,16 +19,27 @@ const Card = ({ unit, image, name, brewed, description, volume }) => {
       <Image src={image} alt={name}></Image>
       <IntraContainer>
         <Name>{name}</Name>
-        <Brewed>Brewed: {brewed}</Brewed>
+
+        <Ul>
+          <Brewed>Brewed: {brewed}</Brewed>
+          <Amount>
+            Inventory amount: {volume}
+            <span>{unit}</span>
+          </Amount>
+        </Ul>
         <Button onClick={() => setShowDescription(!showDescription)}>
-          {showDescription ? "Description" : "Description"}
-          {showDescription ? <BiHide /> : <BiShowAlt />}
+          {showDescription ? (
+            <div>
+              <p>View description</p> <BiHide size="18" />
+            </div>
+          ) : (
+            <div>
+              <p>View description</p>
+              <BiShowAlt size="18" />
+            </div>
+          )}
         </Button>
         {showDescription && <Description>{description}</Description>}
-        <Amount>
-          Inventory amount: {volume}
-          {unit}
-        </Amount>
       </IntraContainer>
     </Container>
   );

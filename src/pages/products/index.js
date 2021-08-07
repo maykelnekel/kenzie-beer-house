@@ -5,7 +5,7 @@ import { useCasamento } from "../../providers/casamento";
 import { useConfrat } from "../../providers/confraternizacao";
 import { useFormatura } from "../../providers/formatura/inde";
 import { toast } from "react-toastify";
-import { Container } from "./styles";
+import { ContainerCard, Container, InputContainer } from "./styles";
 
 const Products = () => {
   const { productsList } = useProducts();
@@ -39,9 +39,9 @@ const Products = () => {
     }
   };
   return (
-    <div>
+    <Container>
       {productsList.map((item) => (
-        <Container key={item.id}>
+        <ContainerCard key={item.id}>
           <Card
             image={item.image_url}
             name={item.name}
@@ -50,9 +50,9 @@ const Products = () => {
             volume={item.volume.value}
             unit={item.volume.unit}
           />
-          <div>
+          <InputContainer>
             <input
-              placeholder="Events"
+              placeholder="Events &darr;"
               list="events"
               value={event}
               onChange={(event) => setEvent(event.target.value)}
@@ -62,11 +62,11 @@ const Products = () => {
               <option value="Party" />
               <option value="Graduation" />
             </datalist>
-            <button onClick={() => handleClick(item)}>Add list</button>
-          </div>
-        </Container>
+            <button onClick={() => handleClick(item)}>Add to list</button>
+          </InputContainer>
+        </ContainerCard>
       ))}
-    </div>
+    </Container>
   );
 };
 export default Products;

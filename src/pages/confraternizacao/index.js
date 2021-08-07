@@ -1,14 +1,15 @@
 import Card from "../../components/cards";
 import RemoveButton from "../../components/removeButton";
 import { useConfrat } from "../../providers/confraternizacao";
+import { Container, ContainerCard, ContainerButton } from "./styles";
 
 const Confraternizacao = () => {
   const { confratLista, setConfratLista } = useConfrat();
 
   return (
-    <div>
+    <Container>
       {confratLista.map((item, index) => (
-        <div key={index}>
+        <ContainerCard key={index}>
           <Card
             image={item.image_url}
             name={item.name}
@@ -17,17 +18,17 @@ const Confraternizacao = () => {
             volume={item.volume.value}
             unit={item.volume.unit}
           />
-          <div>
+          <ContainerButton>
             <RemoveButton
               product={item}
               lista={confratLista}
               setLista={setConfratLista}
               productIndex={index}
             />
-          </div>
-        </div>
+          </ContainerButton>
+        </ContainerCard>
       ))}
-    </div>
+    </Container>
   );
 };
 export default Confraternizacao;

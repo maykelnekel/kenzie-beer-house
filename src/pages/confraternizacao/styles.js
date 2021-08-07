@@ -1,9 +1,9 @@
 import styled from "styled-components";
+
 export const Container = styled.div`
   :first-child {
     margin-top: 5rem;
   }
-
   @media (min-width: 1024px) {
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +11,7 @@ export const Container = styled.div`
   }
 `;
 export const ContainerCard = styled.div`
+  border-bottom: 1px solid gray;
   width: 100%;
   max-width: 400px;
   padding: 1rem 0;
@@ -19,25 +20,22 @@ export const ContainerCard = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom: 1px solid gray;
   @media (min-width: 1024px) {
     margin: 1rem;
   }
 `;
-export const InputContainer = styled.div`
+export const ContainerButton = styled.div`
   margin-top: 1rem;
   button {
-    background-color: tomato;
-    border: 2px solid tomato;
-    width: 130px;
+    background-color: transparent;
+    border: 1px solid tomato;
+    width: 200px;
     padding: 0.5rem;
-    color: white;
+    color: tomato;
     text-transform: uppercase;
-  }
-  input {
-    width: 110px;
-    padding: 0.5rem;
-    border-radius: none;
-    margin-right: 0.5rem;
+    :hover {
+      background-color: tomato;
+      color: whitesmoke;
+    }
   }
 `;

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
+  margin-top: 4rem;
+
   background-image: url("../assets/images/fundo-home.jpg");
 `;
 export const About = styled.section`
@@ -14,18 +16,19 @@ export const About = styled.section`
   justify-content: center;
 
   h1 {
+    width: 94vw;
     font-size: 2rem;
     font-weight: 700;
-    /* width: 100vw; */
-    padding: 1rem;
+    padding: 3vw;
     background-color: tomato;
   }
   p {
     font-size: 1rem;
-    width: 100%;
+    width: 90%;
     margin-top: 1rem;
-    padding: 0 1rem;
+    padding: 0;
     line-height: 1.2rem;
+    margin-left: 3vw;
   }
 
   button {
