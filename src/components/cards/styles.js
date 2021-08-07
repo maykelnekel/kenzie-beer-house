@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: space-between;
   justify-content: space-evenly;
   color: gray;
+  position: relative;
 `;
 
 export const IntraContainer = styled.div`
@@ -39,9 +40,13 @@ export const Description = styled.p`
   padding: 0.5rem;
   background-color: tomato;
   line-height: 1.2rem;
-  /* margin: 0.5rem 0; */
   color: white;
   margin: 0;
+  @media (min-width: 850px) {
+    position: absolute;
+    bottom: 2rem;
+    box-shadow: 0 0 30px 1px gray;
+  }
 `;
 export const Button = styled.button`
   background-color: transparent;
@@ -53,7 +58,6 @@ export const Button = styled.button`
   div {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-wrap: nowrap;
     p {
       margin-right: 0.5rem;

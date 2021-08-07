@@ -4,7 +4,7 @@ export const Container = styled.div`
   :first-child {
     margin-top: 5rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 728px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -20,7 +20,7 @@ export const ContainerCard = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  @media (min-width: 1024px) {
+  @media (min-width: 728px) {
     margin: 1rem;
   }
 `;
