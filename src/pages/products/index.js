@@ -5,6 +5,7 @@ import { useCasamento } from "../../providers/casamento";
 import { useConfrat } from "../../providers/confraternizacao";
 import { useFormatura } from "../../providers/formatura/inde";
 import { toast } from "react-toastify";
+import { Container } from "./styles";
 
 const Products = () => {
   const { productsList } = useProducts();
@@ -40,7 +41,7 @@ const Products = () => {
   return (
     <div>
       {productsList.map((item) => (
-        <div key={item.id}>
+        <Container key={item.id}>
           <Card
             image={item.image_url}
             name={item.name}
@@ -63,7 +64,7 @@ const Products = () => {
             </datalist>
             <button onClick={() => handleClick(item)}>Add list</button>
           </div>
-        </div>
+        </Container>
       ))}
     </div>
   );
