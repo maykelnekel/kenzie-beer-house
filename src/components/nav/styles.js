@@ -11,6 +11,7 @@ export const Barra = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
 `;
 export const Title = styled.h1`
   color: whitesmoke;
