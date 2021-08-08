@@ -5,7 +5,7 @@ export const Container = styled.div`
   min-height: 200px;
   display: flex;
   align-items: space-between;
-  justify-content: space-evenly;
+  justify-content: center;
   color: gray;
   position: relative;
 `;

@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   :first-child {
     margin-top: 5rem;
-  }
-  @media (min-width: 728px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 `;
 export const ContainerCard = styled.div`
