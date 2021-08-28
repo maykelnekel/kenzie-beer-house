@@ -1,6 +1,6 @@
  # Kenzie Beer House
 _A responsive project of a marketplace and shopping list maker for events._
-_Using react context providers_
+_Using react context providers._
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/maykelnekel/hamburgueria-kenzie?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/maykelnekel/hamburgueria-kenzie?style=for-the-badge)
