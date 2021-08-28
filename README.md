@@ -2,9 +2,9 @@
 _A responsive project of a marketplace and shopping list maker for events._
 _Using react context providers._
 
-![GitHub repo size](https://img.shields.io/github/repo-size/maykelnekel/hamburgueria-kenzie?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/maykelnekel/hamburgueria-kenzie?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/maykelnekel/hamburgueria-kenzie?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/maykelnekel/kenzie-beer-house?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/maykelnekel/kenzie-beer-house?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/maykelnekel/kenzie-beer-house?style=for-the-badge)
 
 > Developed on Mobile First
 # 
