@@ -1,5 +1,6 @@
  # Kenzie Beer House
 _A responsive project of a marketplace and shopping list maker for events._
+_Using react context providers_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/maykelnekel/hamburgueria-kenzie?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/maykelnekel/hamburgueria-kenzie?style=for-the-badge)
@@ -8,7 +9,7 @@ _A responsive project of a marketplace and shopping list maker for events._
 > Developed on Mobile First
 # 
 
-### Visit the [Vercel](https://vercel.com) project webpage - [https://3b05-adm-de-eventos.vercel.app/products](https://3b05-adm-de-eventos.vercel.app/products)
+### Visit the [Vercel](https://vercel.com) project webpage - [https://3b05-adm-de-eventos.vercel.app](https://3b05-adm-de-eventos.vercel.app)
 
 <br>
 
